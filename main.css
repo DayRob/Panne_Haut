@@ -1,0 +1,38 @@
+body{
+    background-image: url(https://keiturna.fr/ressources/img/bg_FlatLandscape1.jpg);
+}
+.aceuille{
+    -webkit-text-stroke: 1.5px black;
+    color:rgb(240, 128, 128);
+    font-family:cursive;
+    text-align: center;
+    font-size: 40px;
+}
+img{
+    float: left 
+}
+a{
+    -webkit-text-stroke: 0.8px black;
+    color:rgb(240, 128, 128);
+    font-family: cursive;
+    font-size: 150%;
+}
+.para{
+    font-family: fantasy;
+    color: azure;
+    text-align: center;s
+}
+.output {
+    background: #eee;
+    position: relative;
+}
+.securite{
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 50px
+}
+.vent{
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 50px
+}
