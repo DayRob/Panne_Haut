@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="main.css">
+    <title>Projet école</title>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"> </script>
+    <script type=text/javascript> $(function() { $("#manu").click(function (event) { $.getJSON('/SomeFunction', { },
+    function(data) { }); return false; }); }); </script>
+</head>
+    <body>  
+        <div class="aceuille">
+            <h1>☀Panne Haut☀</h1>
+        </div>
+        <div class="para">
+            <a>Voici l'historique du panneau solaire et ces prévisions:</a>
+        </div>
+        <div class="securite">
+            <canvas id="chart" width="2250" height="250"></canvas>
+        </div>
+        <div class="vent">
+            <canvas id="myChart" width="2250"  height="250"></canvas>
+        </div>
+        <script>
+var ctx = document.getElementById('chart').getContext('2d');
+var chart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ["2021-03-03 04:00:00", "2021-03-03 07:00:00", "2021-03-03 10:00:00", "2021-03-03 13:00:00", "2021-03-03 16:00:00", "2021-03-03 19:00:00", "2021-03-03 22:00:00", "2021-03-04 01:00:00", "2021-03-04 04:00:00", "2021-03-04 07:00:00", "2021-03-04 10:00:00", "2021-03-04 13:00:00", "2021-03-04 16:00:00", "2021-03-04 19:00:00", "2021-03-04 22:00:00", "2021-03-05 01:00:00", "2021-03-05 04:00:00"],
+        datasets: [{
+            label: 'mise en sécurité',
+            borderColor: 'rgb(248, 89, 112)',
+            backgroundColor: 'rgb(69,0,79)',
+            data: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+        }]
+    },
+    options: {
+        repsoncive:'boolean',
+        maintainAspectRatio:'boolean',
+    }
+});
+     </script>
+        <script>
+         var ctx = document.getElementById('myChart').getContext('2d');
+var chart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ["2021-03-03 04:00:00", "2021-03-03 07:00:00", "2021-03-03 10:00:00", "2021-03-03 13:00:00", "2021-03-03 16:00:00", "2021-03-03 19:00:00", "2021-03-03 22:00:00", "2021-03-04 01:00:00", "2021-03-04 04:00:00", "2021-03-04 07:00:00", "2021-03-04 10:00:00", "2021-03-04 13:00:00", "2021-03-04 16:00:00", "2021-03-04 19:00:00", "2021-03-04 22:00:00", "2021-03-05 01:00:00", "2021-03-05 04:00:00"],
+        datasets: [{
+            label: 'Vents moyen',
+            borderColor: 'rgb(248, 89, 112)',
+            backgroundColor: 'rgb(255,200,215)',
+            data : [6.8, 8.5, 9.2, 8.3, 8.6, 8.9, 4.7, 2.6, 3.2, 3, 1.5, 9.1, 14, 14.2, 14.4, 12.3, 5]
+        }]
+    },
+    options: {
+        repsoncive:'boolean',
+        maintainAspectRatio:'boolean',
+    }
+});
+    </script>
+    </body>
+</html>
